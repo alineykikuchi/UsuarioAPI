@@ -1,0 +1,12 @@
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\bin\Debug\netcoreapp2.2\JuntoSeguro.Services.deps.json
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\bin\Debug\netcoreapp2.2\JuntoSeguro.Services.dll
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\bin\Debug\netcoreapp2.2\JuntoSeguro.Services.pdb
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\bin\Debug\netcoreapp2.2\JuntoSeguros.Models.dll
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\bin\Debug\netcoreapp2.2\JuntoSeguros.Models.pdb
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.csprojAssemblyReference.cache
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.csproj.CoreCompileInputs.cache
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.AssemblyInfoInputs.cache
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.AssemblyInfo.cs
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.csproj.CopyComplete
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.dll
+C:\Users\YumiKikuchi.DESKTOP-KH5C1T2\source\repos\UsuarioAPI\JuntoSeguro.Services\obj\Debug\netcoreapp2.2\JuntoSeguro.Services.pdb
