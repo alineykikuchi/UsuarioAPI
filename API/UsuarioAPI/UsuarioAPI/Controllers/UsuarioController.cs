@@ -1,10 +1,8 @@
 ﻿using UsuarioAPI.ControlePermissaoBusiness.Interfaces;
 using JuntoSeguros.Models.Dto;
-using JuntoSeguros.Models.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UsuarioAPI.Controllers
 {
@@ -31,10 +29,10 @@ namespace UsuarioAPI.Controllers
             return Ok(JsonConvert.SerializeObject(lista));
         }
 
-        [HttpGet("{id}", Name = "Usuario")]
-        public IActionResult ConsultaUsuario(int usuarioId)
+        [HttpGet("Usuario/{id}")]
+        public IActionResult ConsultaUsuario(int id)
         {
-            var usuario = _usuarioBusiness.ConsultaUsuario(usuarioId);
+            var usuario = _usuarioBusiness.ConsultaUsuario(id);
             if (usuario == null)
                 return NotFound();
             
@@ -68,7 +66,7 @@ namespace UsuarioAPI.Controllers
         {
             if (usuarioDto == null)
                 return BadRequest();
-
+            
             var retorno = _usuarioBusiness.DeletarUsuario(usuarioDto);
 
             return Ok(JsonConvert.SerializeObject(retorno));

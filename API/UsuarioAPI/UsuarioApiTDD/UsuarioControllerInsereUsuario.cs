@@ -4,13 +4,9 @@ using JuntoSeguros.Models.Dto;
 using JuntoSeguros.Models.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.TestHost;
-using Microsoft.EntityFrameworkCore;
 using Moq;
 using Newtonsoft.Json;
 using System;
-using UsuarioAPI.ControlePermissaoBusiness;
-using UsuarioAPI.ControlePermissaoBusiness.Interfaces;
 using UsuarioAPI.Controllers;
 using Xunit;
 

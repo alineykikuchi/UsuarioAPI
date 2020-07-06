@@ -47,8 +47,6 @@ namespace JuntoSeguros.Models.Data
                     _context.Remove(model);
                 }
             }
-            else
-                throw new Exception(string.Format("Id of {0} not exists.", typeof(T).Name));
 
             _context.SaveChanges();
         }
@@ -66,10 +64,7 @@ namespace JuntoSeguros.Models.Data
                     _context.Update(model);
                 }
             }
-
-            else
-                throw new Exception(string.Format("Id of {0} not exists.", typeof(T).Name)); //_context.Entry(model).State = EntityState.Added;
-
+            
             _context.SaveChanges();
         }
     }

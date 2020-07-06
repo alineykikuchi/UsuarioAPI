@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using UsuarioAPI.Extension;
 using UsuarioAPI.Services;
 
+
 namespace UsuarioAPI
 {
     public class Startup
@@ -54,6 +55,9 @@ namespace UsuarioAPI
                      ValidateAudience = false
                  };
              });
+
+            services.AddSwaggerGen(s =>
+                s.SwaggerDoc("v1", new OpenApiInfoInfo { Title = "", Version = "v1"}));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,6 +81,13 @@ namespace UsuarioAPI
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
+            
+            app.UseSwagger();
+            
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
         }
 
         

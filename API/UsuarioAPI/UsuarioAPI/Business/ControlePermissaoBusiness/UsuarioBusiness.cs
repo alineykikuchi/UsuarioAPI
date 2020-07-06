@@ -5,6 +5,7 @@ using JuntoSeguros.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Linq;
 
 namespace UsuarioAPI.ControlePermissaoBusiness
 {
@@ -45,15 +46,25 @@ namespace UsuarioAPI.ControlePermissaoBusiness
             return _usuarioRepository.GetAll();
         }
 
-        public string AlterarUsuario(UsuarioDto usuarioDto)
+        public Usuario AlterarUsuario(UsuarioDto usuarioDto)
         {
             if (usuarioDto.UsuarioId == null)
                 throw new Exception("Id não usuário não informado");
-
+            
             var usuario = MapperDtoToModel(usuarioDto);
-            _usuarioRepository.Update(usuario);
+            
+            if (!_usuarioRepository.GetAll().Any(x => x.UsuarioId == usuarioDto.UsuarioId.Value))
+                _usuarioRepository.Add(usuario);
 
-            return "Processamento realizado com sucesso.";
+            else
+            {
+                usuario.UsuarioId = usuarioDto.UsuarioId.Value;
+                _usuarioRepository.Update(usuario);
+            }
+                
+
+            
+            return usuario;
         }
 
         public string DeletarUsuario(UsuarioDto usuarioDto)
@@ -61,8 +72,10 @@ namespace UsuarioAPI.ControlePermissaoBusiness
             if (usuarioDto.UsuarioId == null)
                 throw new Exception("Id não usuário não informado");
 
-            var usuario = MapperDtoToModel(usuarioDto);
-            _usuarioRepository.Remove(usuario);
+            var usuario = _usuarioRepository.GetById(usuarioDto.UsuarioId.Value);
+
+            if(usuario != null)
+                _usuarioRepository.Remove(usuario);
 
             return "Processamento realizado com sucesso.";
         }
@@ -89,8 +102,7 @@ namespace UsuarioAPI.ControlePermissaoBusiness
         private Usuario MapperDtoToModel(UsuarioDto usuarioDto)
         {
             var usuario = new Usuario();
-
-            usuario.UsuarioId = usuarioDto.UsuarioId ?? 0;
+            
             usuario.Login = usuarioDto.Login;
             usuario.Nome = usuarioDto.Nome;
             usuario.Senha = usuarioDto.Senha;

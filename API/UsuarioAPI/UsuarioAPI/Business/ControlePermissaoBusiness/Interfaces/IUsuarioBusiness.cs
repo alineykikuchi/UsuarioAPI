@@ -13,7 +13,7 @@ namespace UsuarioAPI.ControlePermissaoBusiness.Interfaces
 
         IEnumerable<Usuario> ListaUsuarios();
 
-        string AlterarUsuario(UsuarioDto usuario);
+        Usuario AlterarUsuario(UsuarioDto usuario);
 
         string DeletarUsuario(UsuarioDto usuario);
     }
